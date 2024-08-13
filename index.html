@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe Layouts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+        .column, .full {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .basic {
+            background-color: #f0f0f0;
+        }
+        .two-column .column {
+            background-color: #e0e0e0;
+            flex: 1;
+        }
+        .three-column .column {
+            background-color: #d0d0d0;
+            flex: 1;
+        }
+        .two-row .row {
+            flex-direction: column;
+        }
+        .three-row .row {
+            flex-direction: column;
+        }
+        .four-row .row {
+            flex-direction: column;
+        }
+        .article-layout {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .article-left, .article-right {
+            background-color: #c0c0c0;
+            padding: 10px;
+            box-sizing: border-box;
+            flex: 1;
+        }
+        .article-right {
+            order: 1;
+        }
+        .article-main {
+            background-color: #b0b0b0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .full {
+            background-color: #f0f0f0;
+        }
+        .three-column .column {
+            background-color: #e0e0e0;
+            flex: 1;
+        }
+        .medium-grid .item, .small-grid .item, .large-grid .item {
+            background-color: #d0d0d0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .medium-grid .item {
+            flex: 1;
+            min-width: calc(33.33% - 20px);
+        }
+        .small-grid .item {
+          flex: 1;
+            min-width: calc(50% - 20px);
+        }
+        .large-grid .item {
+            flex: 1;
+            min-width: calc(25% - 20px);
+        }
+        .promo-box {
+            background-color: #c0c0c0;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        header, footer {
+            background-color: #a0a0a0;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wireframes</h1>
+    </header>
+    <div class="container">
+        <!-- Basic Layout -->
+        <div class="full basic">
+            <h2>Basic Layout</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia adipisci fugit atque, cupiditate esse voluptates
+               maiores fugiat mollitia quaerat asperiores alias reiciendis sit, ratione ullam porro tempore facilis enim aperiam, 
+               corporis ipsum dicta. Minus quam omnis iste saepe voluptatem iusto. Odio ea ut esse vitae maiores, asperiores qui
+                aut fugit, saepe nemo, impedit soluta! Illum officiis omnis est eligendi quae delectus ducimus accusamus repudiandae 
+                eaque ex sunt hic, atque inventore nesciunt rerum, sequi minus? Recusandae distinctio modi libero est reiciendis
+                 iusto ipsam beatae ut accusantium dolores tempore, eaque eius iste? Assumenda omnis quisquam accusamus eaque
+                  necessitatibus delectus nobis voluptatum eveniet.</p>
+        </div>
+        <!-- Two-Column Layout -->
+        <div class="row two-column">
+          <div class="column">
+              <h2>Left Column</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate neque sequi necessitatibus vero tenetur
+                 blanditiis, dolor, reiciendis magnam temporibus ipsa, et sed. Quae officiis voluptates reiciendis illo soluta 
+                 commodi sunt illum, sapiente quam voluptas eius, enim vitae fugit deserunt nulla eligendi culpa fuga, necessitatibus
+                  corporis maxime aut recusandae laborum blanditiis! Vitae ex est reprehenderit, fugit eum, nihil quasi saepe ullam 
+                  vero consequatur amet assumenda possimus ea enim unde iste mollitia labore consectetur debitis ipsa. Animi, placeat! 
+                  Dolorem repudiandae mollitia earum voluptate nulla molestiae dolorum, soluta repellendus illo et facere eos dolor
+                   inventore assumenda natus cupiditate commodi voluptatibus quam enim, sunt vitae! Esse iusto repudiandae accusamus 
+                   eaque at, voluptate, quidem, dolores dolorem fugit animi molestias eligendi a labore consequatur. Quasi vero libero
+                    eligendi saepe quibusdam in debitis expedita commodi! Doloremque, eum eos! Corporis iure eaque ab debitis labore!
+                     Blanditiis, modi. Eius doloremque, iste voluptates ducimus ea nam molestias quidem dignissimos, cumque accusamus 
+                     ipsam possimus ratione voluptatum debitis nostrum corrupti sunt fuga? Quas, sequi, delectus dolor iste animi vero 
+                     sit dolorum atque nemo nihil ducimus architecto ratione numquam! Reiciendis magnam libero nulla sequi corporis
+                      officia, voluptate veniam doloribus, ad optio reprehenderit repellendus amet nisi quo aperiam, ipsa hic 
+                      voluptates debitis eum obcaecati?</p>
+          </div>
+          <div class="column">
+              <h2>Right Column</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate neque sequi necessitatibus vero tenetur
+                blanditiis, dolor, reiciendis magnam temporibus ipsa, et sed. Quae officiis voluptates reiciendis illo soluta 
+                commodi sunt illum, sapiente quam voluptas eius, enim vitae fugit deserunt nulla eligendi culpa fuga, necessitatibus
+                 corporis maxime aut recusandae laborum blanditiis! Vitae ex est reprehenderit, fugit eum, nihil quasi saepe ullam 
+                 vero consequatur amet assumenda possimus ea enim unde iste mollitia labore consectetur debitis ipsa. Animi, placeat! 
+                 Dolorem repudiandae mollitia earum voluptate nulla molestiae dolorum, soluta repellendus illo et facere eos dolor
+                  inventore assumenda natus cupiditate commodi voluptatibus quam enim, sunt vitae! Esse iusto repudiandae accusamus 
+                  eaque at, voluptate, quidem, dolores dolorem fugit animi molestias eligendi a labore consequatur. Quasi vero libero
+                   eligendi saepe quibusdam in debitis expedita commodi! Doloremque, eum eos! Corporis iure eaque ab debitis labore!
+                    Blanditiis, modi. Eius doloremque, iste voluptates ducimus ea nam molestias quidem dignissimos, cumque accusamus 
+                    ipsam possimus ratione voluptatum debitis nostrum corrupti sunt fuga? Quas, sequi, delectus dolor iste animi vero 
+                    sit dolorum atque nemo nihil ducimus architecto ratione numquam! Reiciendis magnam libero nulla sequi corporis
+                     officia, voluptate veniam doloribus, ad optio reprehenderit repellendus amet nisi quo aperiam, ipsa hic 
+                     voluptates debitis eum obcaecati.</p>
+          </div>
+      </div>
+
+      <!-- Three-Column Layout -->
+      <div class="row three-column">
+          <div class="column">
+              <h2>Left Column</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem odit. Hic adipisci sequi, incidunt quasi quibusdam eligendi ducimus deserunt dolorem cupiditate 
+                 cum obcaecati doloribus suscipit, fugiat laboriosam quisquam libero harum! Quaerat voluptate nulla 
+                 repellendus porro debitis doloribus quam quod, temporibus quo nesciunt dolore reprehenderit tempora 
+                 perspiciatis obcaecati consectetur illo iusto? Atque ipsum amet odit, delectus qui sequi facilis quas, 
+                 eveniet blanditiis voluptatem iste saepe esse adipisci voluptatibus maiores!</p>
+          </div>
+          <div class="column">
+              <h2>Center Column</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem odit. Hic adipisci sequi, incidunt quasi quibusdam eligendi ducimus deserunt dolorem cupiditate 
+                 cum obcaecati doloribus suscipit, fugiat laboriosam quisquam libero harum! Quaerat voluptate nulla 
+                 repellendus porro debitis doloribus quam quod, temporibus quo nesciunt dolore reprehenderit tempora 
+                 perspiciatis obcaecati consectetur illo iusto? Atque ipsum amet odit, delectus qui sequi facilis quas, 
+                 eveniet blanditiis voluptatem iste saepe esse adipisci voluptatibus maiores!</p>
+          </div>
+          <div class="column">
+              <h2>Right Column</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem odit. Hic adipisci sequi, incidunt quasi quibusdam eligendi ducimus deserunt dolorem cupiditate 
+                 cum obcaecati doloribus suscipit, fugiat laboriosam quisquam libero harum! Quaerat voluptate nulla 
+                 repellendus porro debitis doloribus quam quod, temporibus quo nesciunt dolore reprehenderit tempora 
+                 perspiciatis obcaecati consectetur illo iusto? Atque ipsum amet odit, delectus qui sequi facilis quas, 
+                 eveniet blanditiis voluptatem iste saepe esse adipisci voluptatibus maiores!</p>
+          </div>
+      </div>
+      <!-- Two-Row Layout -->
+      <div class="row two-row">
+        <div class="full">
+            <h2>Row 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.</p>
+        </div>
+        <div class="full">
+            <h2>Row 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.</p>
+        </div>
+    </div>
+
+    <!-- Three-Row Layout -->
+    <div class="row three-row">
+        <div class="full">
+            <h2>Row 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.</p>
+        </div>
+        <div class="full">
+            <h2>Row 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.</p>
+        </div>
+        <div class="full">
+            <h2>Row 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.</p>
+        </div>
+    </div>
+     <!-- Four-Row Layout -->
+     <div class="row four-row">
+      <div class="full">
+          <h2>Row 1</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem odit.Content goes here...</p>
+      </div>
+      <div class="full">
+          <h2>Row 2</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem odit.Content goes here...</p>
+      </div>
+      <div class="full">
+          <h2>Row 3</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem odit.Content goes here...</p>
+      </div>
+      <div class="full">
+          <h2>Row 4</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem odit.Content goes here...</p>
+      </div>
+  </div>
+  <!-- Article Layout -->
+  <div class="article-layout">
+    <div class="row">
+        <div class="article-left">
+            <h2>Article Left</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.Content goes here...</p>
+        </div>
+        <div class="article-main">
+            <h2>Main Article</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+               magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+               reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                autem odit.Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem odit.Content goes here...</p>
+        </div>
+        <div class="article-right">
+            <h2>Article Right</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+              magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+              reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+               autem odit.Content goes here...</p>
+        </div>
+    </div>
+    <!-- Landing Page -->
+    <div class="full">
+      <h2>Landing Page</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+        magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+        reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+         autem oditWelcome to the landing page!</p>
+  </div>
+  <!-- Medium Grid -->
+  <div class="row medium-grid">
+    <div class="item">
+        <h2>Medium Grid Item 1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem oditContent goes here...</p>
+    </div>
+    <div class="item">
+        <h2>Medium Grid Item 2</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem oditContent goes here...</p>
+    </div>
+    <div class="item">
+        <h2>Medium Grid Item 3</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem oditContent goes here...</p>
+    </div>
+</div>
+        <!-- Small Grid -->
+        <div class="row small-grid">
+          <div class="item">
+              <h2>Small Grid Item 1</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem oditContent goes here...</p>
+          </div>
+          <div class="item">
+              <h2>Small Grid Item 2</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem oditContent goes here...</p>
+          </div>
+      </div>
+      <!-- Large Grid -->
+      <div class="row large-grid">
+        <div class="item">
+            <h2>Large Grid Item 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem oditContent goes here...</p>
+        </div>
+        <div class="item">
+            <h2>Large Grid Item 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem oditContent goes here...</p>
+        </div>
+        <div class="item">
+            <h2>Large Grid Item 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem oditContent goes here...</p>
+        </div>
+        <div class="item">
+            <h2>Large Grid Item 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+                magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+                reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+                 autem oditContent goes here...</p>
+          </div>
+          
+      </div>
+
+      <!-- Promo Box -->
+      <div class="promo-box">
+          <h2>Promo Box</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sint maiores, quis, ab optio 
+            magni voluptates numquam quas consequatur non, laudantium id in sit necessitatibus. Provident iste 
+            reprehenderit consectetur accusamus laboriosam nisi esse saepe hic voluptatum repudiandae. A quam nobis
+             autem oditPromotional content goes here...</p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+<footer>
+<p>Footer</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
